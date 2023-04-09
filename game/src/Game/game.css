@@ -1,0 +1,84 @@
+div.avatar-container {
+    width: 99%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+}
+
+@media screen and (min-width: 576px) {
+    div.avatar-container {
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    div.avatar-container {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+}
+
+div.avatar-container div {
+    margin: 25px;
+    height: 250px;
+    width: 200px;
+    border-radius: 25px;
+    background: linear-gradient(90deg, rgba(115, 115, 115, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    text-align: center;
+    position: relative;
+}
+
+div.avatar-container div.run-container {
+    padding: 15px;
+    height: auto;
+}
+
+div.avatar-container div img.game {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+div.avatar-container div img.indicator-image {
+    width: 15px;
+    height: 15px;
+}
+
+div.avatar-container div img.animate {
+    animation: bounce 1s 3;
+}
+
+@keyframes bounce {
+    0% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 25px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+
+div.buttons-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+div.buttons-container .run-button {
+    width: 80px;
+    margin: 15px;
+    cursor: pointer;
+}
+
+div.buttons-container .run-button:disabled {
+    opacity: 0.5;
+    cursor: no-drop;
+}
